@@ -1,0 +1,5 @@
+nastran (0.1.95-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #807967)
+
+ -- Luca Dall'Olio <luca.dallolio@gmail.com>  Sun, 13 Dec 2015 10:27:24 +0100

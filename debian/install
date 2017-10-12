@@ -1,0 +1,7 @@
+#!/usr/bin/dh-exec
+mds/nastran => /usr/lib/nastran/nast-run
+rf /usr/share/nastran
+test/bar.inp /usr/share/doc/nastran/examples
+inp/*.inp /usr/share/doc/nastran/examples
+inp/*.inp /usr/share/doc/nastran/examples
+bin/nastran.sh => /usr/bin/nastran

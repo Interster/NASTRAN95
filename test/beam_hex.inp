@@ -1,0 +1,91 @@
+ID CIHEX1,TEST
+SOL 1,1
+DIAG 14,8
+CEND
+TITLE=BEAM WITH IHEX1 ELEMENTS UNDER PURE BENDING
+SPC = 1
+DISP(PLOT) = ALL
+SPCF = ALL
+ELFORCE = ALL
+STRESS(BILIN) = ALL
+GPFORCE = ALL
+SUBCASE 1
+LOAD = 2
+BEGIN BULK
+PARAM,GRDPNT,0
+PARAM,AUTOSPC,1
+CIHEX1  11      1       13      12      1       2       26      23      +HEX1-1 
++HEX1-1 24      25
+CIHEX1  12      1       14      13      2       3       28      26      +HEX1-2 
++HEX1-2 25      27
+CIHEX1  13      1       15      14      3       4       30      28      +HEX1-3 
++HEX1-3 27      29
+CIHEX1  14      1       16      15      4       5       32      30      +HEX1-4 
++HEX1-4 29      31   
+CIHEX1  15      1       17      16      5       6       34      32      +HEX1-5 
++HEX1-5 31      33   
+CIHEX1  16      1       18      17      6       7       36      34      +HEX1-6 
++HEX1-6 33      35   
+CIHEX1  17      1       19      18      7       8       38      36      +HEX1-7 
++HEX1-7 35      37   
+CIHEX1  18      1       20      19      8       9       40      38      +HEX1-8 
++HEX1-8 37      39   
+CIHEX1  19      1       21      20      9       10      42      40      +HEX1-9 
++HEX1-9 39      41   
+CIHEX1  20      1       22      21      10      11      44      42      +HEX1-10 
++HEX1-10 41      43   
+MAT1     1      1000.           .3      1.-9
+$PIHEX    1      1               4       4.5     10.0 
+PIHEX    1      1
+GRID     1               0.      0.      0.
+GRID     2              10.      0.      0.
+GRID     3              20.      0.      0.
+GRID     4              30.      0.      0.
+GRID     5              40.      0.      0.
+GRID     6              50.      0.      0.
+GRID     7              60.      0.      0.
+GRID     8              70.      0.      0.
+GRID     9              80.      0.      0.
+GRID     10             90.      0.      0.
+GRID     11             100.     0.      0.
+GRID     12              0.     10.      0.
+GRID     13             10.     10.      0.
+GRID     14             20.     10.      0.
+GRID     15             30.     10.      0.
+GRID     16             40.     10.      0.
+GRID     17             50.     10.      0.
+GRID     18             60.     10.      0.
+GRID     19             70.     10.      0.
+GRID     20             80.     10.      0.
+GRID     21             90.     10.      0.
+GRID     22             100.    10.      0.
+GRID     23              0.     10.     10.
+GRID     24              0.      0.     10.
+GRID     25             10.      0.     10.
+GRID     26             10.     10.     10.
+GRID     27             20.      0.     10.
+GRID     28             20.     10.     10.
+GRID     29             30.      0.     10.
+GRID     30             30.     10.     10.
+GRID     31             40.      0.     10.
+GRID     32             40.     10.     10.
+GRID     33             50.      0.     10.
+GRID     34             50.     10.     10.
+GRID     35             60.      0.     10.
+GRID     36             60.     10.     10.
+GRID     37             70.      0.     10.
+GRID     38             70.     10.     10.
+GRID     39             80.      0.     10.
+GRID     40             80.     10.     10.
+GRID     41             90.      0.     10.
+GRID     42             90.     10.     10.
+GRID     43             100.     0.     10.
+GRID     44             100.    10.     10.
+SPC1     1       1       1       12      23      24
+SPC1     1       2       1       24
+SPC1     1       3       23      24
+FORCE    2       22      0      5.      1.       0.      0.
+FORCE    2       44      0      5.      1.       0.      0.
+FORCE    2       11      0      5.      -1.      0.      0.
+FORCE    2       43      0      5.      -1.      0.      0.
+ENDDATA

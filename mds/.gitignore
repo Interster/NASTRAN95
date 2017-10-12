@@ -1,0 +1,9 @@
+
+# Ignore executables
+nastran
+nastran.exe
+nasthelp.exe
+nastplot.exe
+
+check-fill.exe
+fixed-field.exe

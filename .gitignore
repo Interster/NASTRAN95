@@ -1,0 +1,45 @@
+
+# Object files
+*.o
+*.trs
+
+# test files
+*.in12
+*.log
+*.out
+*.out11
+*.out15
+*.nptp
+*.plt
+*.plt1
+*.plt2
+*.pnh
+*.sof1
+*.sof2
+*.15
+*.16
+*.76
+fort.6
+fort.4
+none
+
+# http://www.gnu.org/software/automake
+Makefile
+
+# http://www.gnu.org/software/autoconf
+
+/autom4te.cache
+/compile
+/depcomp
+/stamp-h1
+/autoscan.log
+/config.log
+/config.status
+
+# Eclipse files
+.cproject
+.project
+.settings
+
+# Quilt
+.pc

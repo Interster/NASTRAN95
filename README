@@ -1,0 +1,53 @@
+PREREQUISITES:
+
+    -  A fortran compiler, gfortran will do. On Linux, Windows (mingw) and
+       on Android using CCTools.
+    
+    -  GNU make.
+
+
+HOW TO USE:
+
+    1. Run make.
+    
+    2. Avoid the "-" character, it will break nastran.
+    
+    3. Place your problem file in the "test" directory. You'll finde 
+       some in the "inp" directory.
+    
+    4. Run from there ..\bin\nastran.sh xxx or on windows  ..\bin\nastran.bat xxx
+       where xxx is your problem file (without the file extension). For
+       Android have a look at the android.sh script. For Android you have
+       to link the program statically, otherwise it will segfault.
+
+
+ISSUES:
+
+    -  This is really old stuff, unmaintained for over 20 years. Expect
+       something will break.
+    
+    -  There are some features missing in comparision to the commercial
+       Nastran versions. Some entities have different names.
+       E.g.:  RBE3 <=> CRBE3
+             CHEXA <=> CIHEX1
+    
+    -  The CQUAD4 and especially the CIHEX1 (the Cosmic CHEXA) suffers from
+       shear locking. Two test cases are profided in the test directory. 
+       This could be improved by implementing selective reduced integration
+       as it is described in the Fourteenth NASTRAN Users' Colloquium
+       (p. 28ff) and in: http://paginas.fe.up.pt/~rnatal/paper.pdf.
+    
+    -  There seems to be no corner stress output for the CQUAD4 element,
+       whereas it is calculated within the SQUD42 subroutine.
+    
+    -  There are no optimization capabilities, exept the FSD method as
+       shown in the NASTRAN DEMONSTRATION PROBLEM NO. D01-16-1A
+    
+    -  There is no predefined binary result output, as some users may be
+       used to PARAM,POST. Nevertheless it is possible to write an op2 file
+       via DMAP alters, which then can be read by common post-processing
+       software. Basically insert 
+       OUTPUT2  "DATABLOCK",,,,//C,N,0/C,N,11////C,N,*MSC* $
+       after the OPF DMAP statement.
+    
+
